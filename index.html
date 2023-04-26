@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+    
+    <head>
+    <title>Icon Template Square</title>
+        <style>
+            .image-container {
+                padding: 9px;px;
+            }
+            body{
+                background-image: url('background5.jpeg');
+                background-size: 100%;
+                background-position:top;
+                background-repeat: no-repeat;
+                background-attachment:fixed;
+            }
+        </style>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/buzz/1.2.1/buzz.min.js"></script>
+    </head>
+
+    <body>
+
+        <div class="row">
+            <div class="image-container"><img id="home" src="img/home.png" onmouseover="this.src='img/home2.png';" onmouseout="this.src='img/home.png';" height="65" width="65"/></div>
+            <div class="image-container"><img id="chatbot" src="img/chatbot.png" onmouseover="this.src='img/chatbot2.png';" onmouseout="this.src='img/chatbot.png';" height="65" width="65"/></div>
+            <div class="image-container"><img id="yourinfo" src="img/yourinfo.png" onmouseover="this.src='img/yourinfo2.png';" onmouseout="this.src='img/yourinfo.png';" height="65" width="65"/></div>
+        </div>
+
+        <div class="row">
+            <div class="image-container"><img id="directions" src="img/directions.png" onmouseover="this.src='img/directions2.png';" onmouseout="this.src='img/directions.png';"height="65" width="65"/></div>
+            <div class="image-container"><img id="bring" src="img/bring.png" onmouseover="this.src='img/bring2.png';" onmouseout="this.src='img/bring.png';"height="65" width="65"/></div>
+            <div class="image-container"><img id="access" src="img/access.png" onmouseover="this.src='img/access2.png';" onmouseout="this.src='img/access.png';"height="65" width="65"/></div>
+            </div>
+
+        <div class="row">
+            <div class="image-container"><img id="location" src="img/Location.png" onmouseover="this.src='img/Location2.png';" onmouseout="this.src='img/Location.png';"height="65" width="65"/></div>
+            <div class="image-container"><img id="partnership" src="img/partnership.png" onmouseover="this.src='img/partnership2.png';" onmouseout="this.src='img/partnership.png';"height="65" width="65"/></div>
+            <div class="image-container"><img id="hobby" src="img/hobby.png" onmouseover="this.src='img/hobby2.png';" onmouseout="this.src='img/hobby.png';"height="65" width="65"/></div>
+        </div>
+        
+        <script>
+            var sound1= new buzz.sound("sound/accesssound.mp3");
+            var sound2= new buzz.sound("sound/chatbotsound.wav");
+            var sound3= new buzz.sound("sound/directionssound.wav");
+            var sound4= new buzz.sound("sound/hobbysound.wav");
+            var sound5= new buzz.sound("sound/homesound.flac");
+            var sound6= new buzz.sound("sound/Locationsound.mp3");
+            var sound7= new buzz.sound("sound/partnershipsound.mp3");
+            var sound8= new buzz.sound("sound/whattobringsound.wav");
+            var sound9= new buzz.sound("sound/yourinfosound.wav");
+
+            window.onload = function () {
+                document.getElementById('home').addEventListener('click',function () {sound5.play("sound/homesound.flac"); });
+                document.getElementById('chatbot').addEventListener('click',function () {sound2.play("sound/chatbotsound.wav"); });
+                document.getElementById('yourinfo').addEventListener('click',function () {sound9.play("sound/yourinfosound.wav"); });
+                document.getElementById('directions').addEventListener('click',function () {sound3.play("sound/directionssound.wav"); });
+                document.getElementById('bring').addEventListener('click',function () {sound8.play("sound/whattobringsound.wav"); });
+                document.getElementById('access').addEventListener('click',function () {sound1.play("sound/accesssound.mp3"); });
+                document.getElementById('location').addEventListener('click',function () {sound6.play("sound/Locationsound.mp3"); });
+                document.getElementById('partnership').addEventListener('click',function () {sound7.play("sound/partnershipsound.mp3"); });
+                document.getElementById('hobby').addEventListener('click',function () {sound4.play("sound/hobbysound.wav"); });
+            }
+
+
+        </script>
+    </body>
+    
+</html>
